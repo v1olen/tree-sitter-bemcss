@@ -49,14 +49,14 @@
   },
   "tree-sitter": [
     {
-      "scope": "source.rust.bem",
-      "injection-regex": "^(rust|rs)$",
+      "scope": "source.rust.bemcss",
+      "path": "bemcss"
+    },
+    {
+      "scope": "source.rust.rust_with_bemcss",
+      "path": "rust_with_bemcss",
       "file-types": ["rs"],
-      "highlights": "queries/highlights.scm",
-      "injections": "queries/injections.scm",
-      "locals": "queries/locals.scm",
-      "folds": "queries/folds.scm",
-      "indents": "queries/indents.scm"
+      "content-regex": "#\\[bem\\(\""
     }
   ]
 }
