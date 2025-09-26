@@ -56,7 +56,7 @@
       "scope": "source.rust.rust_with_bemcss",
       "path": "rust_with_bemcss",
       "file-types": ["rs"],
-      "content-regex": "#\\[bem\\(\""
+      "content-regex": "bem"
     }
   ]
 }
