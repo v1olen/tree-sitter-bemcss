@@ -1,9 +1,9 @@
-; Standard macro injections - keep rust for regular macros
+; Standard macro injections - use rust_with_bemcss for better injection support
 (macro_invocation
   macro: (_) @_macro_name
   (token_tree) @injection.content
   (#not-match? @_macro_name "bem$")
-  (#set! injection.language "rust")
+  (#set! injection.language "rust_with_bemcss")
   (#set! injection.include-children))
 
 ; BEM macro injection - inject CSS into bem macro string literals
@@ -45,12 +45,12 @@
 (macro_definition
   (macro_rule
     left: (token_tree_pattern) @injection.content
-    (#set! injection.language "rust")))
+    (#set! injection.language "rust_with_bemcss")))
 
 (macro_definition
   (macro_rule
     right: (token_tree) @injection.content
-    (#set! injection.language "rust")))
+    (#set! injection.language "rust_with_bemcss")))
 
 ([
   (line_comment)
